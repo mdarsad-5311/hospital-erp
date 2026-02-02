@@ -134,7 +134,7 @@ export default function IPD() {
           </button>
           <button
             onClick={() => setAdmissionDialogOpen(true)}
-            className="flex items-center gap-2 rounded-lg bg-blue-500 px-4 py-2 text-white transition hover:bg-blue-600"
+            className="flex items-center gap-2 rounded-lg bg-gradient-to-br from-green-600 to-indigo-800 shadow px-4 py-2 text-white transition hover:bg-blue-600"
           >
             <Plus size={16} />
             New Admission

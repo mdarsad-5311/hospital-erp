@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext"
 import DashboardLayout from "./components/layout/DashboardLayout";
 import Index from "./pages/Index"
+import { CommandPalette } from "./components/ui/command-palette";
 import Login from "./pages/Login"
 import Dashboard from "./pages/Dashboard"
 import Patients from "./pages/Patients"
@@ -32,6 +33,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <CommandPalette />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/login" element={<Login />} />

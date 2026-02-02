@@ -14,7 +14,7 @@ const quickActions = [
     label: "New Patient",
     icon: <UserPlus size={20} />,
     href: "/patients/new",
-    primary: true,
+    // primary: true,
   },
   {
     label: "Book Appointment",
@@ -55,11 +55,10 @@ export default function QuickActions() {
           <Link
             key={action.label}
             to={action.href}
-            className={`flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-medium transition-all
-              ${
-                action.primary
-                  ? "bg-blue-600 text-white hover:bg-blue-700"
-                  : "bg-gray-100 dark:bg-gray-400 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-500"
+            className={`flex items-center gap-from2 rounded-xl px-4 py-3 text-sm font-medium transition-all
+              ${action.primary
+                ? "bg-gradient-to-br-green-300 to-indigo-400 text-white hover:bg-gradient-to-br from-green-600 to-indigo-800 "
+                : "bg-green-100 dark:bg-green-300 text-gray-800 dark:text-white hover:bg-green-500 dark:hover:bg-green-600"
               }
             `}
           >

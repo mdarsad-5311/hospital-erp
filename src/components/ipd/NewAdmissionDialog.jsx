@@ -191,7 +191,7 @@ export default function NewAdmission({ open, onClose, availableBeds = [] }) {
                     </button>
 
                     <button
-                        className="bg-emerald-600 text-white px-4 py-2 rounded"
+                        className="bg-gradient-to-br from-green-600 to-indigo-800 shadow text-white px-4 py-2 rounded"
                         onClick={() => (step === 4 ? onClose() : setStep(step + 1))}
                     >
                         Next <ChevronRight size={16} className="inline" />

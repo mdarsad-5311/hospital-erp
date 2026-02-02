@@ -90,7 +90,7 @@ export default function Appointments() {
 
         <button
           onClick={() => setShowModal(true)}
-          className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg"
+          className="flex items-center gap-2 px-4 py-2 bg-gradient-to-br from-green-600 to-indigo-800 text-white shadow text-white rounded-lg"
         >
           <CalendarPlus size={18} />
           Book Appointment
@@ -198,7 +198,7 @@ export default function Appointments() {
                   alert("Appointment booked ✅");
                   setShowModal(false);
                 }}
-                className="px-4 py-2 bg-blue-600 text-white rounded"
+                className="px-4 py-2 bg-gradient-to-br from-green-600 to-indigo-800 text-white shadow text-white rounded"
               >
                 Book
               </button>

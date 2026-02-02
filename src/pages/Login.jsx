@@ -39,7 +39,7 @@ export default function Login() {
   return (
     <div className="min-h-screen flex">
       {/* LEFT PANEL */}
-      <div className="hidden lg:flex w-1/2 bg-gradient-to-br from-blue-600 to-indigo-700 text-white items-center justify-center p-12">
+      <div className="hidden lg:flex w-1/2 bg-gradient-to-br from-green-500 to-indigo-700 text-white items-center justify-center p-12">
         <div className="text-center space-y-6">
           <div className="w-20 h-20 mx-auto bg-white/20 rounded-2xl flex items-center justify-center">
             <Activity size={40} />
@@ -138,7 +138,7 @@ export default function Login() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition"
+                className="w-full bg-gradient-to-br from-green-500 to-indigo-700 hover:bg-gradient-to-br from-green-400 to-indigo-600 text-white hover:text-white py-2 rounded-lg font-semibold transition"
               >
                 {loading ? "Signing in..." : "Sign In"}
               </button>

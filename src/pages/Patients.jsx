@@ -104,7 +104,7 @@ export default function Patients() {
 
                 <button
                     onClick={() => setShowModal(true)}
-                    className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg"
+                    className="flex items-center gap-2 bg-gradient-to-br from-green-600 to-indigo-800 text-white shado text-white px-4 py-2 rounded-lg"
                 >
                     <UserPlus size={18} />
                     Register Patient
@@ -139,8 +139,8 @@ export default function Patients() {
                         key={tab}
                         onClick={() => setActiveTab(tab)}
                         className={`px-4 py-2 rounded-lg text-sm font-medium ${activeTab === tab
-                                ? "bg-blue-600 text-white"
-                                : "bg-gray-100"
+                            ? "bg-gradient-to-br from-green-600 to-indigo-800 text-white shadow"
+                            : "bg-gradient-to-br from-green-300 to-indigo-500 text-white shadow"
                             }`}
                     >
                         {tab.toUpperCase()}
@@ -261,7 +261,7 @@ export default function Patients() {
                                     alert("Patient registered ✅");
                                     setShowModal(false);
                                 }}
-                                className="px-4 py-2 bg-blue-600 text-white rounded"
+                                className="px-4 py-2 bg-gradient-to-br from-green-600 to-indigo-800 text-white shadow text-white rounded"
                             >
                                 Register
                             </button>

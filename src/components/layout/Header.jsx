@@ -12,7 +12,7 @@ export default function Header() {
     .slice(0, 2);
 
   return (
-    <header className="h-16 bg-white  border-b border-gray-200 dark:border-gray-700 flex items-center justify-between px-6">
+    <header className="h-16 bg-white  border-b border-gray-200 dark:border-gray-700 flex items-center justify-between px-6 ml-2">
       {/* Search */}
       <div className="relative w-96 hidden md:block">
         <Search
