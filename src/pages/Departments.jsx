@@ -42,18 +42,18 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../co
 import Button from '../components/ui/button';
 import Input from '../components/ui/input';
 import Badge from '../components/ui/badge';
-import {Progress} from '../components/ui/progress';
+import { Progress } from '../components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../components/ui/table';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from '../components/ui/dropdown-menu';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '../components/ui/dialog';
-import  {Label} from '../components/ui/label';
-import {Textarea} from '../components/ui/textarea';
-import {Switch} from '../components/ui/switch';
-import {ScrollArea} from '../components/ui/scroll-area';
-import {Separator} from '../components/ui/separator';
+import { Label } from '../components/ui/label';
+import { Textarea } from '../components/ui/textarea';
+import { Switch } from '../components/ui/switch';
+import { ScrollArea } from '../components/ui/scroll-area';
+import { Separator } from '../components/ui/separator';
 import { toast } from 'sonner';
 
 // Mock data
@@ -478,8 +478,8 @@ export default function Departments() {
     const [departments] = useState(mockDepartments);
 
     const [searchQuery, setSearchQuery] = useState('');
-    const [statusFilter, setStatusFilter] = useState ('all');
-    const [selectedDepartment, setSelectedDepartment] = useState (null);
+    const [statusFilter, setStatusFilter] = useState('all');
+    const [selectedDepartment, setSelectedDepartment] = useState(null);
     const [viewDialogOpen, setViewDialogOpen] = useState(false);
     const [addDialogOpen, setAddDialogOpen] = useState(false);
     const [addStaffDialogOpen, setAddStaffDialogOpen] = useState(false);
@@ -557,7 +557,7 @@ export default function Departments() {
     return (
         <div className="space-y-6">
             {/* Header */}
-            <div>
+            <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                 <div>
                     <h1 className="text-3xl font-bold tracking-tight">Departments</h1>
                     <p className="text-muted-foreground">Manage hospital departments, staff, and resources</p>

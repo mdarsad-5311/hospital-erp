@@ -477,7 +477,7 @@ Summary:
                         <Download className="h-4 w-4" />
                         Export
                     </Button>
-                    <Button className="gap-2 bg-primary hover:bg-primary/90" onClick={() => setNewInvoiceOpen(true)}>
+                    <Button className="gap-2 bg-gradient-to-br from-green-600 to-indigo-800 hover:bg-primary/90" onClick={() => setNewInvoiceOpen(true)}>
                         <Plus className="h-4 w-4" />
                         New Invoice
                     </Button>
@@ -697,103 +697,103 @@ Summary:
                                 </TableHeader>
                                 <TableBody>
                                     {/* <AnimatePresence> */}
-                                        {filteredInvoices.map((invoice, index) => (
-                                            <tr
+                                    {filteredInvoices.map((invoice, index) => (
+                                        <tr
 
-                                                className="group hover:bg-muted/30 transition-colors"
-                                            >
-                                                <TableCell>
-                                                    <div className="flex items-center gap-3">
-                                                        <div className="h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center">
-                                                            <Receipt className="h-4 w-4 text-primary" />
-                                                        </div>
-                                                        <div>
-                                                            <p className="font-medium text-foreground">{invoice.invoiceNumber}</p>
-                                                            <p className="text-xs text-muted-foreground">{invoice.patientId}</p>
-                                                        </div>
+                                            className="group hover:bg-muted/30 transition-colors"
+                                        >
+                                            <TableCell>
+                                                <div className="flex items-center gap-3">
+                                                    <div className="h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                                                        <Receipt className="h-4 w-4 text-primary" />
                                                     </div>
-                                                </TableCell>
-                                                <TableCell>
-                                                    <div className="flex items-center gap-2">
-                                                        <Avatar className="h-8 w-8">
-                                                            <AvatarFallback className="bg-primary/10 text-primary text-xs">
-                                                                {invoice.patientName.split(" ").map(n => n[0]).join("")}
-                                                            </AvatarFallback>
-                                                        </Avatar>
-                                                        <span className="font-medium">{invoice.patientName}</span>
-                                                    </div>
-                                                </TableCell>
-                                                <TableCell>
-                                                    <Badge variant="outline" className={invoice.patientType === "IPD" ? "border-blue-200 text-blue-700 dark:border-blue-800 dark:text-blue-400" : ""}>
-                                                        {invoice.patientType}
-                                                    </Badge>
-                                                </TableCell>
-                                                <TableCell>
                                                     <div>
-                                                        <p className="text-sm">{new Date(invoice.date).toLocaleDateString()}</p>
-                                                        <p className="text-xs text-muted-foreground">Due: {new Date(invoice.dueDate).toLocaleDateString()}</p>
+                                                        <p className="font-medium text-foreground">{invoice.invoiceNumber}</p>
+                                                        <p className="text-xs text-muted-foreground">{invoice.patientId}</p>
                                                     </div>
-                                                </TableCell>
-                                                <TableCell className="text-right font-medium">{formatCurrency(invoice.total)}</TableCell>
-                                                <TableCell className="text-right text-emerald-600 dark:text-emerald-400">{formatCurrency(invoice.paid)}</TableCell>
-                                                <TableCell className="text-right">
-                                                    {invoice.balance > 0 ? (
-                                                        <span className="text-amber-600 dark:text-amber-400 font-medium">{formatCurrency(invoice.balance)}</span>
-                                                    ) : (
-                                                        <span className="text-muted-foreground">-</span>
-                                                    )}
-                                                </TableCell>
-                                                <TableCell>
-                                                    <Badge className={`gap-1 ${getStatusColor(invoice.status)}`}>
-                                                        {getStatusIcon(invoice.status)}
-                                                        {invoice.status.charAt(0).toUpperCase() + invoice.status.slice(1)}
-                                                    </Badge>
-                                                </TableCell>
-                                                <TableCell className="text-right">
-                                                    <DropdownMenu>
-                                                        <DropdownMenuTrigger asChild>
-                                                            <Button variant="ghost" size="icon" className="h-8 w-8">
-                                                                <MoreVertical className="h-4 w-4" />
-                                                            </Button>
-                                                        </DropdownMenuTrigger>
-                                                        <DropdownMenuContent align="end">
-                                                            <DropdownMenuItem onClick={() => handleViewInvoice(invoice)}>
-                                                                <Eye className="h-4 w-4 mr-2" />
-                                                                View Details
+                                                </div>
+                                            </TableCell>
+                                            <TableCell>
+                                                <div className="flex items-center gap-2">
+                                                    <Avatar className="h-8 w-8">
+                                                        <AvatarFallback className="bg-primary/10 text-primary text-xs">
+                                                            {invoice.patientName.split(" ").map(n => n[0]).join("")}
+                                                        </AvatarFallback>
+                                                    </Avatar>
+                                                    <span className="font-medium">{invoice.patientName}</span>
+                                                </div>
+                                            </TableCell>
+                                            <TableCell>
+                                                <Badge variant="outline" className={invoice.patientType === "IPD" ? "border-blue-200 text-blue-700 dark:border-blue-800 dark:text-blue-400" : ""}>
+                                                    {invoice.patientType}
+                                                </Badge>
+                                            </TableCell>
+                                            <TableCell>
+                                                <div>
+                                                    <p className="text-sm">{new Date(invoice.date).toLocaleDateString()}</p>
+                                                    <p className="text-xs text-muted-foreground">Due: {new Date(invoice.dueDate).toLocaleDateString()}</p>
+                                                </div>
+                                            </TableCell>
+                                            <TableCell className="text-right font-medium">{formatCurrency(invoice.total)}</TableCell>
+                                            <TableCell className="text-right text-emerald-600 dark:text-emerald-400">{formatCurrency(invoice.paid)}</TableCell>
+                                            <TableCell className="text-right">
+                                                {invoice.balance > 0 ? (
+                                                    <span className="text-amber-600 dark:text-amber-400 font-medium">{formatCurrency(invoice.balance)}</span>
+                                                ) : (
+                                                    <span className="text-muted-foreground">-</span>
+                                                )}
+                                            </TableCell>
+                                            <TableCell>
+                                                <Badge className={`gap-1 ${getStatusColor(invoice.status)}`}>
+                                                    {getStatusIcon(invoice.status)}
+                                                    {invoice.status.charAt(0).toUpperCase() + invoice.status.slice(1)}
+                                                </Badge>
+                                            </TableCell>
+                                            <TableCell className="text-right">
+                                                <DropdownMenu>
+                                                    <DropdownMenuTrigger asChild>
+                                                        <Button variant="ghost" size="icon" className="h-8 w-8">
+                                                            <MoreVertical className="h-4 w-4" />
+                                                        </Button>
+                                                    </DropdownMenuTrigger>
+                                                    <DropdownMenuContent align="end">
+                                                        <DropdownMenuItem onClick={() => handleViewInvoice(invoice)}>
+                                                            <Eye className="h-4 w-4 mr-2" />
+                                                            View Details
+                                                        </DropdownMenuItem>
+                                                        {invoice.balance > 0 && (
+                                                            <DropdownMenuItem onClick={() => handleReceivePayment(invoice)}>
+                                                                <CreditCard className="h-4 w-4 mr-2" />
+                                                                Receive Payment
                                                             </DropdownMenuItem>
-                                                            {invoice.balance > 0 && (
-                                                                <DropdownMenuItem onClick={() => handleReceivePayment(invoice)}>
-                                                                    <CreditCard className="h-4 w-4 mr-2" />
-                                                                    Receive Payment
+                                                        )}
+                                                        <DropdownMenuItem onClick={() => handlePrintInvoice(invoice)}>
+                                                            <Printer className="h-4 w-4 mr-2" />
+                                                            Print Invoice
+                                                        </DropdownMenuItem>
+                                                        <DropdownMenuItem onClick={() => handleDownloadInvoice(invoice)}>
+                                                            <Download className="h-4 w-4 mr-2" />
+                                                            Download PDF
+                                                        </DropdownMenuItem>
+                                                        <DropdownMenuSeparator />
+                                                        <DropdownMenuItem onClick={() => handleSendInvoice(invoice)}>
+                                                            <Send className="h-4 w-4 mr-2" />
+                                                            Send to Patient
+                                                        </DropdownMenuItem>
+                                                        {invoice.status !== "paid" && invoice.status !== "cancelled" && (
+                                                            <>
+                                                                <DropdownMenuSeparator />
+                                                                <DropdownMenuItem className="text-destructive" onClick={() => handleCancelInvoice(invoice)}>
+                                                                    <XCircle className="h-4 w-4 mr-2" />
+                                                                    Cancel Invoice
                                                                 </DropdownMenuItem>
-                                                            )}
-                                                            <DropdownMenuItem onClick={() => handlePrintInvoice(invoice)}>
-                                                                <Printer className="h-4 w-4 mr-2" />
-                                                                Print Invoice
-                                                            </DropdownMenuItem>
-                                                            <DropdownMenuItem onClick={() => handleDownloadInvoice(invoice)}>
-                                                                <Download className="h-4 w-4 mr-2" />
-                                                                Download PDF
-                                                            </DropdownMenuItem>
-                                                            <DropdownMenuSeparator />
-                                                            <DropdownMenuItem onClick={() => handleSendInvoice(invoice)}>
-                                                                <Send className="h-4 w-4 mr-2" />
-                                                                Send to Patient
-                                                            </DropdownMenuItem>
-                                                            {invoice.status !== "paid" && invoice.status !== "cancelled" && (
-                                                                <>
-                                                                    <DropdownMenuSeparator />
-                                                                    <DropdownMenuItem className="text-destructive" onClick={() => handleCancelInvoice(invoice)}>
-                                                                        <XCircle className="h-4 w-4 mr-2" />
-                                                                        Cancel Invoice
-                                                                    </DropdownMenuItem>
-                                                                </>
-                                                            )}
-                                                        </DropdownMenuContent>
-                                                    </DropdownMenu>
-                                                </TableCell>
-                                            </tr>
-                                        ))}
+                                                            </>
+                                                        )}
+                                                    </DropdownMenuContent>
+                                                </DropdownMenu>
+                                            </TableCell>
+                                        </tr>
+                                    ))}
                                     {/* </AnimatePresence> */}
                                 </TableBody>
                             </Table>

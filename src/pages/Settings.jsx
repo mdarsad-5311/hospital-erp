@@ -31,15 +31,15 @@ import {
     EyeOff,
 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
-import  Button  from "../components/ui/button";
-import  Input  from "../components/ui/input";
+import Button from "../components/ui/button";
+import Input from "../components/ui/input";
 import { Label } from "../components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
 import { Switch } from "../components/ui/switch";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
 import { Textarea } from "../components/ui/textarea";
-import  Badge  from "../components/ui/badge";
+import Badge from "../components/ui/badge";
 import { Separator } from "../components/ui/separator";
 import { toast } from "sonner";
 
@@ -51,9 +51,9 @@ const Settings = () => {
 
     // Profile state
     const [profile, setProfile] = useState({
-        firstName: "Dr. John",
-        lastName: "Smith",
-        email: "john.smith@hospital.com",
+        firstName: "Dr. UMAIMA",
+        lastName: "ARSAD",
+        email: "umaima.arsad@hospital.com",
         phone: "+1 (555) 123-4567",
         role: "Doctor",
         department: "Cardiology",

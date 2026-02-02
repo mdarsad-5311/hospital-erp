@@ -19,7 +19,7 @@ const Button = React.forwardRef(function Button(
 
     const variants = {
         default:
-            "bg-blue-600 text-white hover:bg-blue-600/90 shadow-md hover:shadow-lg hover:-translate-y-0.5",
+            "bg-gradient-to-br from-green-600 to-indigo-800 text-white hover:bg-blue-600/90 shadow-md hover:shadow-lg hover:-translate-y-0.5",
         destructive:
             "bg-red-600 text-white hover:bg-red-600/90 shadow-md hover:shadow-lg",
         outline:
